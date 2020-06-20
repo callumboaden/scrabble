@@ -1,7 +1,13 @@
 const gameBoard = document.querySelector('.board');
+
 renderBoard();
 
-// render board with 15 x 15 tiles
+// generate all tiles in the game
+function generateGameTiles() {
+
+}
+
+// generate board with 15 x 15 cells
 function generateBoard() {
     let board = []
 
