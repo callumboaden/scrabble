@@ -10,6 +10,29 @@
             width: 25px;
             height: 25px;
             border: 1px solid #000000;
+
+            &.trippleWordScore {
+                background: red;
+            }
+
+            &.doubleWordScore {
+                background: pink;
+            }
+
+            &.trippleLetterScore {
+                background: blue;
+            }
+
+            &.doubleLetterScore {
+                background: skyblue;
+            }
+
+            &.center {
+                background: pink;
+            }
+
+            
         }
     }
 }
+
