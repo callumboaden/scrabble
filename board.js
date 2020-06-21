@@ -28,7 +28,7 @@ function renderBoard() {
         row.classList.add('row');
 
         for (let j = 0; j < board.length; j++) {
-            let cellClass = board[i][j] ? board[i][j].toLowerCase() : 'cell';
+            let cellClass = board[i][j] ? board[i][j] : 'cell';
             let cell = document.createElement('div');
             cell.classList.add('cell');
             cell.classList.add(cellClass)
@@ -43,25 +43,25 @@ function renderBoard() {
 /*
 
 Board Design / Pattern
-1 ['3xWS', '', '', '2xLS', '', '', '', '3xWS', '', '', '', '2xLS', '', '', '3xWS'],
-2 ['', '2xWS', '', '', '', '3xLS', '', '', '', '3xLS', '', '', '', '2xWS', ''],
-3 ['', '', '2xWS', '', '', '', '2xLS', '', '2xLS', '', '', '', '2xWS', '', ''],
-4 ['2xLS', '', '', '2xWS', '', '', '', '2xLS', '', '', '', '2xWS', '', '', ''],
-5 ['', '', '', '', '2xWS', '', '', '', '', '', '2xWS', '', '', '', ''],
-6 ['', '3xLS', '', '', '', '3xLS', '', '', '', '3xLS', '', '', '', '3xLS', ''],
-7 ['', '', '2xLS', '', '', '', '2xLS', '', '2xLS', '', '', '', '2xLS', '', ''],
-8 ['3xWS', '', '', '2xLS', '', '', '', 'center', '', '', '', '2xLS', '', '', '3xWS']
+1 ['trippleWordScore', '', '', 'doubleLetterScore', '', '', '', 'trippleWordScore', '', '', '', 'doubleLetterScore', '', '', 'trippleWordScore'],
+2 ['', 'doubleWordScore', '', '', '', 'trippleLetterScore', '', '', '', 'trippleLetterScore', '', '', '', 'doubleWordScore', ''],
+3 ['', '', 'doubleWordScore', '', '', '', 'doubleLetterScore', '', 'doubleLetterScore', '', '', '', 'doubleWordScore', '', ''],
+4 ['doubleLetterScore', '', '', 'doubleWordScore', '', '', '', 'doubleLetterScore', '', '', '', 'doubleWordScore', '', '', ''],
+5 ['', '', '', '', 'doubleWordScore', '', '', '', '', '', 'doubleWordScore', '', '', '', ''],
+6 ['', 'trippleLetterScore', '', '', '', 'trippleLetterScore', '', '', '', 'trippleLetterScore', '', '', '', 'trippleLetterScore', ''],
+7 ['', '', 'doubleLetterScore', '', '', '', 'doubleLetterScore', '', 'doubleLetterScore', '', '', '', 'doubleLetterScore', '', ''],
+8 ['trippleWordScore', '', '', 'doubleLetterScore', '', '', '', 'center', '', '', '', 'doubleLetterScore', '', '', 'trippleWordScore']
 */
 
 const boardPattern = [
-    ['3xWS', '', '', '2xLS', '', '', '', '3xWS', '', '', '', '2xLS', '', '', '3xWS'],
-    ['', '2xWS', '', '', '', '3xLS', '', '', '', '3xLS', '', '', '', '2xWS', ''],
-    ['', '', '2xWS', '', '', '', '2xLS', '', '2xLS', '', '', '', '2xWS', '', ''],
-    ['2xLS', '', '', '2xWS', '', '', '', '2xLS', '', '', '', '2xWS', '', '', ''],
-    ['', '', '', '', '2xWS', '', '', '', '', '', '2xWS', '', '', '', ''],
-    ['', '3xLS', '', '', '', '3xLS', '', '', '', '3xLS', '', '', '', '3xLS', ''],
-    ['', '', '2xLS', '', '', '', '2xLS', '', '2xLS', '', '', '', '2xLS', '', ''],
-    ['3xWS', '', '', '2xLS', '', '', '', 'center', '', '', '', '2xLS', '', '', '3xWS']
+    ['trippleWordScore', '', '', 'doubleLetterScore', '', '', '', 'trippleWordScore', '', '', '', 'doubleLetterScore', '', '', 'trippleWordScore'],
+    ['', 'doubleWordScore', '', '', '', 'trippleLetterScore', '', '', '', 'trippleLetterScore', '', '', '', 'doubleWordScore', ''],
+    ['', '', 'doubleWordScore', '', '', '', 'doubleLetterScore', '', 'doubleLetterScore', '', '', '', 'doubleWordScore', '', ''],
+    ['doubleLetterScore', '', '', 'doubleWordScore', '', '', '', 'doubleLetterScore', '', '', '', 'doubleWordScore', '', '', ''],
+    ['', '', '', '', 'doubleWordScore', '', '', '', '', '', 'doubleWordScore', '', '', '', ''],
+    ['', 'trippleLetterScore', '', '', '', 'trippleLetterScore', '', '', '', 'trippleLetterScore', '', '', '', 'trippleLetterScore', ''],
+    ['', '', 'doubleLetterScore', '', '', '', 'doubleLetterScore', '', 'doubleLetterScore', '', '', '', 'doubleLetterScore', '', ''],
+    ['trippleWordScore', '', '', 'doubleLetterScore', '', '', '', 'center', '', '', '', 'doubleLetterScore', '', '', 'trippleWordScore']
 ];
 
 function applyBoardPattern() {
