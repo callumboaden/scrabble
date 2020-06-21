@@ -30,9 +30,30 @@
             &.center {
                 background: pink;
             }
-
-            
         }
     }
 }
 
+.player {
+    display: flex;
+
+    .tile {
+        width: 60px;
+        height: 60px;
+        margin: 1em;
+        background: beige;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .tile__letter {
+            font-size: 2em;
+        }
+        .tile__points {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+        }
+    }
+}
