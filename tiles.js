@@ -14,6 +14,8 @@ This set is composed of 200 tiles:
 
 */
 
+const player = document.querySelector('.player');
+
 const gameTiles = [];
 const playerTiles = [];
 
@@ -143,7 +145,24 @@ function dealPlayerTiles() {
   }
 }
 
+function renderPlayerTiles() {
+  let markup = '';
+  for (let i = 0; i < playerTiles.length; i++) {
+    markup += `
+      <div class="tile">
+        <div class="tile__letter">${playerTiles[i].value}</div>
+        <div class="tile__points">${playerTiles[i].points}</div>
+      </div>
+    `;
+  }
+  
+  player.insertAdjacentHTML('beforeend', markup);
+}
+
 generateGameTiles();
 shuffle(gameTiles);
 
 dealPlayerTiles();
+renderPlayerTiles();
+
+console.log(playerTiles)
