@@ -22,4 +22,73 @@
   height: 25px;
   border: 1px solid #000000;
 }
+
+.board .row .cell.trippleWordScore {
+  background: red;
+}
+
+.board .row .cell.doubleWordScore {
+  background: pink;
+}
+
+.board .row .cell.trippleLetterScore {
+  background: blue;
+}
+
+.board .row .cell.doubleLetterScore {
+  background: skyblue;
+}
+
+.board .row .cell.center {
+  background: pink;
+}
+
+.player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.player .tile {
+  width: 60px;
+  height: 60px;
+  margin: 1em;
+  background: beige;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.player .tile .tile__letter {
+  font-size: 2em;
+}
+
+.player .tile .tile__points {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.overlay.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=main.css.map */

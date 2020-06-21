@@ -165,4 +165,4 @@ shuffle(gameTiles);
 dealPlayerTiles();
 renderPlayerTiles();
 
-console.log(playerTiles)
+export { playerTiles }
